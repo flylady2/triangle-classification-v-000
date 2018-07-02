@@ -8,7 +8,11 @@ class Triangle
   end
 
   def kind
-    @types
+    if side_a + side_b > side_c || side_b + side_c > side_a || side_c + side_a > side_b
+      @type
+    else
+      raise TriangleError
+    end
   end
   # write code here
 end
