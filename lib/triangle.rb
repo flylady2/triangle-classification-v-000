@@ -12,3 +12,5 @@ class Triangle
   end
   # write code here
 end
+
+  class TriangleError < StandardError
