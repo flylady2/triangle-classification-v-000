@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :side_a, :side_b, :side_c, :type
+  attr_accessor :side_a, :side_b, :side_c, :equilateral
 
   def initialize(side_a, side_b, side_c)
     @side_a = side_a
@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if side_a + side_b > side_c || side_b + side_c > side_a || side_c + side_a > side_b
+    if side_a == side_b && side_b == side_c
       @type
     else
       raise TriangleError
